@@ -17,6 +17,9 @@
   --index-deep: -99999;
   --index-default: 1;
 
+  /* Time */
+  --transition-default-time: .15s;
+
   /* Font */
   --font-family-base: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   
@@ -33,12 +36,22 @@
   --color-light-100: #fff;
   --color-dark-100: #000;
 
+  /*
   --color-primary: #b88dc4;
   --color-primary-dark: #b486c1;
+  */
+  --color-primary: #b47c53;
+  --color-primary-dark: #aa754f;
 
   /* Anchors */
   --anchor-color: var( --color-primary );
   --anchor-color-hover: var( --color-primary-dark );
+
+  /* Nav Btn */
+  --nav-btn-color: var( --color-primary );
+  --nav-btn-color-hover: var( --color-light-100 );
+  --nav-btn-bg-color: var( --color-light-100 );
+  --nav-btn-bg-color-hover: var( --color-primary );
 }
 
 
@@ -262,6 +275,41 @@ form,
 
 /* Default */
 .page-header { padding: 1.8rem 0; }
+
+.page-header .wrapper {
+  display: grid;
+  grid-template-columns: 120px 36px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.page-header .logo {}
+
+/* Nav Button */
+.page-header .nav-btn {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var( --nav-btn-bg-color );
+  cursor: pointer;
+  transition: all var( --transition-default-time ) ease-in;
+}
+
+.page-header .nav-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.page-header .nav-btn svg rect { fill: var( --nav-btn-color ); }
+
+.page-header .nav-btn:hover,
+.page-header .nav-btn:focus { background-color: var( --nav-btn-bg-color-hover ); }
+
+.page-header .nav-btn:hover svg rect,
+.page-header .nav-btn:focus svg rect { fill: var( --nav-btn-color-hover ); }
 
 
 /*-----------------*\
