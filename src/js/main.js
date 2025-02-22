@@ -12,7 +12,14 @@ function ready(fn) {
 }
 
 // Init
-const init = async () => {};
+const init = async () => {
+  // Copyright Year
+  const copyrightYear = document.getElementById("copyrightYear");
+  if (copyrightYear) {
+    const year = new Date().getFullYear();
+    copyrightYear.textContent = year;
+  }
+};
 
 // Initialise on Document Ready
 ready(init);
