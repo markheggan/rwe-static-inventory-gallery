@@ -21,6 +21,10 @@
   --font-family-base: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   
   --font-size-base: 1rem;
+  --font-size-l: 1.125rem;
+  --font-size-xl: 1.36rem;
+  --font-size-xxl: 1.602rem;
+  --font-size-xxxl: 1.945rem;
 
   --font-weight-regular: 400;
   --font-weight-bold: 600;
@@ -166,6 +170,60 @@ a:focus {
   color: var( --anchor-color-hover );
 }
 
+/* General Elements */
+p, details, address,
+iframe, pre, table, form,
+figure, ul, ol, pre { margin-block-start: 1.75rem; }
+
+ul li,
+ol li { margin-block-start: .5rem; }
+
+hr {
+  margin-block: 2rem;
+  border: 0;
+  height: var( --border-width );
+  background-color: currentColor;
+}
+
+/* Headings */
+h1, h2,
+h3, h4 {
+  font-weight: var( --font-weight-bold );
+  margin-block-start: 2rem;
+}
+
+h1,
+:-webkit-any( article, aside, nav, section ) h1 {
+  font-size: var( --font-size-xxxl );
+	line-height: 1.322;
+}
+
+h2 {
+  font-size: var( --font-size-xxl );
+	line-height: 1.394;
+}
+
+h3 {
+  font-size: var( --font-size-xl );
+	line-height: 1.432;
+}
+
+h4 {
+  font-size: var( --font-size-l );
+	line-height: 1.517;
+}
+
+/* Media */
+img, video,
+svg, iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+img, video,
+svg { height: auto; }
+
 
 /*------------------*\
 \*   Form Styles   *\
@@ -195,6 +253,27 @@ form,
 
   .wrapper { padding-inline: 2rem; }
 
+}
+
+
+/*-----------------*\
+\*   Page Header   *\
+\*-----------------*/
+
+/* Default */
+.page-header { padding: 1.8rem 0; }
+
+
+/*-----------------*\
+\*   Page Footer   *\
+\*-----------------*/
+
+/* Default */
+.page-footer { padding: 1.8rem 0; }
+
+.page-footer .copyright {
+  margin: 0;
+  text-align: center;
 }
 
 
