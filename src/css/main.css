@@ -249,6 +249,14 @@ form,
 ::placeholder { font-style: italic; }
 
 
+/*-----------------------*\
+\*   Navigation Styles   *\
+\*-----------------------*/
+
+/* Default */
+.nav-menu ul { margin-block-start: 0; }
+
+
 /*--------------------*\
 \*   Utility Styles   *\
 \*--------------------*/
@@ -284,7 +292,7 @@ form,
 }
 
 /* Logo */
-.page-header .logo {}
+.page-header .logo { display: block; }
 
 /* Nav Button */
 .page-header .nav-btn {
@@ -299,8 +307,8 @@ form,
 }
 
 .page-header .nav-btn svg {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
 }
 
 .page-header .nav-btn svg rect { fill: var( --nav-btn-color ); }
@@ -310,6 +318,23 @@ form,
 
 .page-header .nav-btn:hover svg rect,
 .page-header .nav-btn:focus svg rect { fill: var( --nav-btn-color-hover ); }
+
+/* Nav Menu */
+.page-header .nav-menu {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+}
+
+.page-header .nav-menu.is_collapsed { display: none; }
+
+.page-header .nav-menu a {
+  display: block;
+  text-decoration: none;
+}
+
+.page-header .nav-menu a:hover,
+.page-header .nav-menu a:focus { text-decoration: underline; }
 
 
 /*-----------------*\
@@ -325,12 +350,22 @@ form,
 }
 
 
+/*---------------*\
+\*   Page Main   *\
+\*---------------*/
+
+/* Default */
+.page-main {}
+
+.page-main h1 { margin-top: 0; }
+
+
 /*-------------------*\
 \*   RWE Inventory   *\
 \*-------------------*/
 
 /* Default */
 .rwe-inventory {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0 !important;
   max-width: 100% !important;
 }
