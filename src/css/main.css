@@ -8,7 +8,34 @@
 \*   Variables   *\
 \*---------------*/
 
-:root {}
+:root {
+  /* Site */
+	--site-min-width: 20rem; /* Target 320px */
+	--site-max-width: 63rem; /* Target 1008px */
+
+  /* Index */
+  --index-deep: -99999;
+  --index-default: 1;
+
+  /* Font */
+  --font-family-base: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
+  --font-size-base: 1rem;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  /* Color */
+  --color-light-100: #fff;
+  --color-dark-100: #000;
+
+  --color-primary: #b88dc4;
+  --color-primary-dark: #b486c1;
+
+  /* Anchors */
+  --anchor-color: var( --color-primary );
+  --anchor-color-hover: var( --color-primary-dark );
+}
 
 
 /*------------------*\
@@ -110,3 +137,73 @@ button:focus { outline: revert; }
 /*-----------------*\
 \*   Base Styles   *\
 \*-----------------*/
+
+/* Selection */
+::selection {
+  color: var( --color-light-100 );
+  background-color: var( --color-primary );
+}
+
+/* Body */
+body {
+  margin: 0;
+  font-size: var( --font-size-base );
+  font-weight: var( --font-weight-regular );
+	font-family: var( --font-family-base );
+	line-height: 1.7;
+  color: var( --color-dark-100 );
+  background-color: var( --color-light-100 );
+}
+
+a {
+  color: var( --anchor-color );
+  transition: color var( --transition-default-time ) ease-in;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var( --anchor-color-hover );
+}
+
+
+/*------------------*\
+\*   Form Styles   *\
+\*------------------*/
+
+/* Default */
+form,
+.form { text-align: start; }
+
+::placeholder { font-style: italic; }
+
+
+/*--------------------*\
+\*   Utility Styles   *\
+\*--------------------*/
+
+/* Wrapper */
+.wrapper {
+  min-width: var( --site-min-width );
+  max-width: var( --site-max-width );
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+}
+
+/* 45rem | 720px */
+@media screen and (min-width: 45rem) {
+
+  .wrapper { padding-inline: 2rem; }
+
+}
+
+
+/*-------------------*\
+\*   RWE Inventory   *\
+\*-------------------*/
+
+/* Default */
+.rwe-inventory {
+  margin-bottom: 1.5rem;
+  max-width: 100% !important;
+}
