@@ -14,9 +14,52 @@ html(lang="en")
     link(rel="stylesheet" href="/css/main.min.css")
     //- RW Elephant Online Gallery Snippet
     script.
-      var rwe_config = {
-        tenant_id: "<tenant_id>",
-        public_api_key: "<public_api_key>"
+      const rwe_config = {
+        tenant_id: "!{rwe_tenant_id}",
+        public_api_key: "!{rwe_public_api_key}",
+        wishlist_active: true,
+        add_to_wishlist_item_listing: true,
+        wishlist_item_listing_icons: "heart",
+        styles: {
+          search: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#b47c53",
+            btn_bghover_color: "#aa754f",
+          },
+          add_wishlist_item_listing_svg: {
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          add_more_items: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#b47c53",
+            btn_bghover_color: "#aa754f",
+          },
+          view_wishlist: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          submit_wishlist: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          add_remove_wishlist: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          submit_wishlist_form: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+        },
+        listing_item_img_hover: true,
+        breadcrumb_index_label: "Our Collection",
+        thumbnail_img_size: "420",
+        currency_symbol: "$",
       }
     script(src="https://code.rwelephant.com/online-gallery-snippet/inventory.min.js")
   body.page

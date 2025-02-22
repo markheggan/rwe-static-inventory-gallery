@@ -36,13 +36,11 @@
   --color-light-100: #fff;
   --color-dark-100: #000;
 
-  /*
-  --color-primary: #b88dc4;
-  --color-primary-dark: #b486c1;
-  */
   --color-primary: #b47c53;
   --color-primary-dark: #aa754f;
-
+  --color-secondary: #d1aeab;
+  --color-secondary-dark: #c99191;
+  
   /* Anchors */
   --anchor-color: var( --color-primary );
   --anchor-color-hover: var( --color-primary-dark );
