@@ -10,8 +10,8 @@
 
 :root {
   /* Site */
-	--site-min-width: 20rem; /* Target 320px */
-	--site-max-width: 63rem; /* Target 1008px */
+  --site-min-width: 20rem; /* Target 320px */
+  --site-max-width: 63rem; /* Target 1008px */
 
   /* Index */
   --index-deep: -99999;
