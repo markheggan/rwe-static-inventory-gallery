@@ -12,8 +12,7 @@ const package = require("./package.json");
 
 // Cache Bursting configuration
 const cbConfig = {
-  value: "%DT%",
-  // value: `${package.version}`,
+  value: `${package.version}`,
   append: {
     key: "v",
     to: ["css", "js"],
