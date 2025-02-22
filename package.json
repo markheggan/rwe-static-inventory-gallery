@@ -1,6 +1,6 @@
 {
   "name": "rwe-static-inventory-gallery",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "RW Elephant Inventory Gallery static page.",
   "main": "index.js",
   "scripts": {
