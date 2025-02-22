@@ -1,0 +1,28 @@
+//- Default Layout
+include ../_site/_config
+block variables
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= `${page_title ? `${page_title} | ${business_name}` : business_name}`
+    if page_description
+      meta(name="description" content=page_description)
+    if theme_color
+      meta(name="theme-color" content=theme_color)
+    link(rel="stylesheet" href="/css/main.min.css")
+    //- RW Elephant Online Gallery Snippet
+    script.
+      var rwe_config = {
+        tenant_id: "<tenant_id>",
+        public_api_key: "<public_api_key>"
+      }
+    script(src="https://code.rwelephant.com/online-gallery-snippet/inventory.min.js")
+  body.page
+    include ../_template-parts/_header
+    main.page-main
+      block content
+    include ../_template-parts/_footer
+    block scripts
+    script(src="/js/main.min.js")
