@@ -1,0 +1,39 @@
+{
+  "name": "rwe-static-inventory-gallery",
+  "version": "0.0.1",
+  "description": "RW Elephant Inventory Gallery static page.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "dev": "gulp dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": {
+    "name": "Mark Heggan",
+    "email": "desk@markheggan.co.uk",
+    "url": "http://markheggan.co.uk/"
+  },
+  "repository": {
+    "url": "git@github.com:markheggan/rwe-static-inventory-gallery.git"
+  },
+  "license": "UNLICENCED",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-header": "^2.0.9",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-version-number": "^0.2.4"
+  },
+  "browserslist": "> 0.25%, not dead"
+}

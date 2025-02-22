@@ -1,0 +1,112 @@
+/*-----------------*\
+     MAIN STYLES
+\*-----------------*/
+
+@charset "utf-8";
+
+/*---------------*\
+\*   Variables   *\
+\*---------------*/
+
+:root {}
+
+
+/*------------------*\
+\*   Reset Styles   *\
+\*------------------*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Prevent font size inflation */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd,
+ul, ol, pre { margin-block-end: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label { line-height: 1.1; }
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 { text-wrap: balance; }
+
+/* A elements get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Hard select style reset, remove default arrow, etc… */
+select {
+  grid-area: select;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1.25em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+select::-ms-expand { display: none; }
+
+select[multiple] { padding-inline-end: 0; }
+
+select[multiple] option { white-space: normal; }
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target { scroll-margin-block: 5ex; }
+
+/* Button reset */
+button {
+  all: unset;
+  text-align: center;
+}
+
+button:focus { outline: revert; }
+
+
+/*-----------------*\
+\*   Base Styles   *\
+\*-----------------*/
