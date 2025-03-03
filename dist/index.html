@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Collection | Musical Chairs</title>
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel="stylesheet" href="/css/main.min.css?v=1.0.0">
+    <script>
+      const rwe_config = {
+        tenant_id: "<your_tenant_id>",
+        public_api_key: "<your_public_api_key>",
+        wishlist_active: true,
+        add_to_wishlist_item_listing: true,
+        wishlist_item_listing_icons: "heart",
+        styles: {
+          search: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#b47c53",
+            btn_bghover_color: "#aa754f",
+          },
+          add_wishlist_item_listing_svg: {
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          add_more_items: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#b47c53",
+            btn_bghover_color: "#aa754f",
+          },
+          view_wishlist: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          submit_wishlist: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          add_remove_wishlist: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+          submit_wishlist_form: {
+            btn_text_color: "#fff",
+            btn_bg_color: "#d1aeab",
+            btn_bghover_color: "#c99191",
+          },
+        },
+        listing_item_img_hover: true,
+        breadcrumb_index_label: "Our Collection",
+        thumbnail_img_size: "420",
+        currency_symbol: "$",
+      }
+    </script>
+    <script src="https://code.rwelephant.com/online-gallery-snippet/inventory.min.js?v=1.0.0"></script>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="wrapper"><a class="logo" href="/"><img class="logo-img" src="img/logo.webp" width="220" height="126" alt="Musical Chairs logo image."></a>
+        <button class="nav-btn" id="navBtn">
+          <svg viewBox="0 0 30 30" fill="none">
+            <rect x="1" y="14" width="28" height="2"></rect>
+            <rect x="1" y="24" width="28" height="2"></rect>
+            <rect x="1" y="4" width="28" height="2"></rect>
+          </svg>
+        </button>
+        <nav class="nav-menu menu-primary" id="navMenu">
+          <ul role="list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="wrapper">
+        <h1>Our Collection</h1>
+        <div class="rwe-inventory"></div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="wrapper">
+        <p class="copyright">Copyright © <span id="copyrightYear">2025</span> <a href="/">Musical Chairs</a>.</p>
+      </div>
+    </footer>
+    <script src="/js/main.min.js?v=1.0.0"></script>
+  </body>
+</html>

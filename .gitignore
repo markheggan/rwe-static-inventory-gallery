@@ -62,6 +62,3 @@ typings/
 
 # serverless build output
 .serverless
-
-# Dist
-dist/
