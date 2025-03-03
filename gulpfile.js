@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const pug = require("gulp-pug");
@@ -6,6 +8,7 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const babel = require("gulp-babel");
 const uglify = require("gulp-uglify");
+const archiver = require("archiver");
 const sourcemaps = require("gulp-sourcemaps");
 const versionNumber = require("gulp-version-number");
 const package = require("./package.json");
@@ -81,6 +84,31 @@ function copyFiles() {
     .pipe(browserSync.stream());
 }
 
+// Task to compile .zip of dist/
+function zipDist(cb) {
+  const packageVersion = package.version;
+  const output = fs.createWriteStream(
+    path.join(__dirname, `${package.name}-v${packageVersion}.zip`)
+  );
+  const archive = archiver("zip", {
+    zlib: { level: 9 }, // Compression level
+  });
+
+  output.on("close", function () {
+    console.log(`${archive.pointer()} total bytes`);
+    console.log("Zip file has been created.");
+    cb();
+  });
+
+  archive.on("error", function (err) {
+    throw err;
+  });
+
+  archive.pipe(output);
+  archive.directory("dist/", false);
+  archive.finalize();
+}
+
 // BrowserSync server
 function serve(cb) {
   browserSync.init({
@@ -108,7 +136,8 @@ exports.default = gulp.series(
 
 // Default task
 exports.build = gulp.series(
-  gulp.parallel(compilePug, processCSS, processJS, copyFiles)
+  gulp.parallel(compilePug, processCSS, processJS, copyFiles),
+  zipDist
 );
 
 // Development task

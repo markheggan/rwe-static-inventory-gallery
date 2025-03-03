@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
+    "archiver": "^7.0.1",
     "browser-sync": "^3.0.2",
     "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
