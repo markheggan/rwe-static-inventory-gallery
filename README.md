@@ -1,3 +1,25 @@
 # RWE Static Inventory Gallery
 
-RW Elephant Inventory Gallery static page.
+This starter template can be used to build a static HTML page containing your rental inventory using the RW Elephant Online Gallery Snippet.
+
+The kit comes with the Online Gallery Snippet set up. You will to add your RW Elephant `tenant_id` and `public_api_key` for your public gallery.
+
+**Rental Categories:**
+
+![Rental Category View](readme/01.png)
+
+**Category Items:**
+
+![Category Item View](readme/03.png)
+
+**Single Item:**
+
+![Single Item View](readme/04.png)
+
+**Wishlist:**
+
+![Wishlist View](readme/05.png)
+
+**Submit Wishlist:**
+
+![Submit Wishlist View](readme/06.png)
