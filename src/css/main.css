@@ -413,4 +413,6 @@ form,
 
 .rwe-inventory .rwe-search__btn,
 .rwe-inventory .rwe-view-wishlist-btn,
-.rwe-inventory .rwe-detail__wishlist-add { font-weight: var( --font-weight-bold ); }
+.rwe-inventory .rwe-detail__wishlist-add,
+.rwe-inventory .rwe-detail__wishlist-remove,
+.rwe-inventory .rwe-submit-form__btn { font-weight: var( --font-weight-bold ); }
