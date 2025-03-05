@@ -415,4 +415,7 @@ form,
 .rwe-inventory .rwe-view-wishlist-btn,
 .rwe-inventory .rwe-detail__wishlist-add,
 .rwe-inventory .rwe-detail__wishlist-remove,
+.rwe-inventory .rwe-add-more-items-btn,
+.rwe-inventory .rwe-submit-wishlist-btn,
+.rwe-inventory .rwe-submit-form__label,
 .rwe-inventory .rwe-submit-form__btn { font-weight: var( --font-weight-bold ); }
