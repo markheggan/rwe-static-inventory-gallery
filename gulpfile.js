@@ -86,9 +86,8 @@ function copyFiles() {
 
 // Task to compile .zip of dist/
 function zipDist(cb) {
-  const packageVersion = package.version;
   const output = fs.createWriteStream(
-    path.join(__dirname, `${package.name}-v${packageVersion}.zip`)
+    path.join(__dirname, `${package.name}-latest.zip`)
   );
   const archive = archiver("zip", {
     zlib: { level: 9 }, // Compression level
