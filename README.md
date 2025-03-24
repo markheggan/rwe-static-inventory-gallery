@@ -2,7 +2,7 @@
 
 This starter template can be used to build a static HTML page containing your rental inventory using the RW Elephant Online Gallery Snippet.
 
-The kit comes with the Online Gallery Snippet set up. You will to add your RW Elephant `tenant_id` and `public_api_key` for your public gallery.
+The kit comes with the Online Gallery Snippet set up. You will need to add your RW Elephant `tenant_id` and `public_api_key`.
 
 **Rental Categories:**
 
